@@ -4,6 +4,17 @@
   <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
   <link href="/styles.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:title" content="{{page.title}} - Hoon School">
+  <meta name="og:description"
+    content="{{page.description}}">
+  <meta name="description"
+    content="{{page.description}}">
+      {% if page.extra.image %}
+            <meta name="twitter:image" content="{{ page.extra.image }}">
+        {% else %}
+    <meta name="twitter:image" content="https://storage.googleapis.com/media.urbit.org/hoonschool/Rectangle%202.png">
+    {% endif %}
   <title>{{page.title}} - Hoon School</title>
 </head>
 
