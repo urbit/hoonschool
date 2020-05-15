@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+  <link href="/styles.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width">
+  <title>{{page.title}} - Hoon School</title>
+</head>
+
+<body>
+  <main class="w-100">
+    <article class="mt7 full">
+      <a href="/" class="mt0 bn mb7 dib" style="color: #555555;">Hoon School</a>
+      <span style="color: #555555;"> / </span>
+      <span>{{page.title}}</span>
+      {{page.content | safe}}
+    </article>
+    <footer class="mt8 mb4 full">
+      <a href="https://urbit.org/privacy">Privacy Policy</a>
+      <a class="ml4" href="https://urbit.org/terms-of-use/">Terms of Service</a>
+    </footer>
+  </main>
+</body>
+
+</html>

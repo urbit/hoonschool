@@ -1,0 +1,118 @@
+@import "indigo";
+@import "grid";
+@import url('https://rsms.me/inter/inter-ui.css');
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-extralight.woff");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-light.woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-regular.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-medium.woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-bold.woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-black.woff");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Inter", "Inter UI", sans-serif;
+  @extend .lh-copy;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  @extend .grid12, .mh7;
+  max-width: 1440px;
+  min-height: 100vh;
+}
+
+a {
+  color: black;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+}
+
+nav a {
+  border-bottom: unset;
+}
+
+address,
+.mono {
+  font-family: "Source Code Pro", monospace;
+  font-style: normal;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    border-width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  font-family: "Inter", "Inter UI", sans-serif;
+  @extend .mb5;
+  input[type=text], input[type=email] {
+    @extend .mv1;
+    .mono {
+      font-family: "Source Code Pro", monospace;
+    }
+    padding: 8px 6px;
+    border: 1px solid #ccc;
+    &.mono, &.mono::placeholder {
+        font-family: "Source Code Pro", monospace;
+    }
+    &::placeholder {
+      color: #808080;
+      font-family: "Inter", "Inter UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+form input[type=submit] {
+    -webkit-appearance: none;
+  }
+
+input:focus {
+  outline: unset;
+}

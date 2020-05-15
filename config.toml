@@ -1,0 +1,19 @@
+# The URL the site will be built for
+base_url = "https://hoon.school"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[extra]
+# Put all your custom variables here
+
+projects = [
+  {name = "Fibonacci in Hoon", image = "https://media.urbit.org/hoonschool/Group%20628.png", link = "https://urbit.org/docs/tutorials/hoon/fibonacci/", difficulty = "medium", description = "In this example, we will write a generator that produces a list of Fibonacci numbers up to n."}
+]
