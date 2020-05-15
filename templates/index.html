@@ -23,7 +23,7 @@
         -> A special and very limited piece of Urbit merch</p>
       </section>
       <h2 class="fw6 f7 full mt9 mb7">Active Sessions</h2>
-      <section class="full flex flex-wrap flex-row">
+      <section class="full flex flex-wrap flex-nowrap-l flex-nowrap-xl flex-row">
         {% set sessions = get_section(path="sessions/_index.md") %}
         {% for session in sessions.pages %}
         <a class="dib bn" href="{{session.permalink}}">
@@ -50,7 +50,7 @@
 
       <h2 class="fw6 f7 full mt9">Example Projects</h2>
       <p class="full mt0 mb7">If you prefer to learn at your own pace, try some of these self-contained projects.</p>
-      <section class="full flex flex-wrap flex-row">
+      <section class="full flex flex-wrap flex-nowrap-l flex-nowrap-xl flex-row">
         {% for project in config.extra.projects %}
         <a class="dib bn" href="{{project.link}}">
           <div class="dib flex flex-column mr8 mb6" style="max-width: 296px;">
@@ -72,7 +72,7 @@
       </section>
       <h2 class="fw6 f7 full mt9">Video</h2>
       <p class="full half-1-md half-1-lg mt0 mb7">The following videos are lectures, isolated tutorials, and other related content that explain Hoon in a non-structured manner.</p>
-      <section class="full flex flex-wrap flex-row">
+      <section class="full flex flex-wrap flex-nowrap-l flex-nowrap-xl flex-row">
         {% set videos = get_section(path="video/_index.md") %}
         {% for video in videos.pages %}
         <a class="dib bn" href="{{video.permalink}}">
