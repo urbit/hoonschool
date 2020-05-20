@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+  <link href="/styles.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width">
+  <title>{{page.title}} - Hoon School</title>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="og:title" content="{{page.title}} - Hoon School">
+  <meta name="og:description" content="{{page.description}}">
+  <meta name="description" content="{{page.description}}">
+  {% if page.extra.image %}
+  <meta name="twitter:image" content="{{ page.extra.image }}">
+  {% else %}
+  <meta name="twitter:image" content="https://storage.googleapis.com/media.urbit.org/hoonschool/Rectangle%202.png">
+  {% endif %}
+</head>
+
+<body>
+  <main class="w-100">
+    <article class="mt7 full grid12">
+      <div class="full">
+      <a href="/" class="mt0 bn mb7 dib" style="color: #555555;">Hoon School</a>
+      <span style="color: #555555;"> / </span>
+      <span>{{page.title}}</span>
+      </div>
+      <div class="full mw6 m0a">
+      {{page.content | safe}}
+      </div>
+    </article>
+    <footer class="mt8 mb4 full">
+      <a href="https://urbit.org/privacy">Privacy Policy</a>
+      <a class="ml4" href="https://urbit.org/terms-of-use/">Terms of Service</a>
+    </footer>
+  </main>
+</body>
+
+</html>
