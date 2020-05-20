@@ -27,23 +27,42 @@
         {% set sessions = get_section(path="sessions/_index.md") %}
         {% for session in sessions.pages %}
         <a class="dib bn" href="{{session.permalink}}">
-        <div class="dib flex flex-column mr8 mb6" style="max-width: 656px;">
-          {% if session.extra.image %}
-          <img src="{{session.extra.image}}" class="w-100 ba"/>
-          {% endif %}
-        <div class="w-100">
-          <p class="dib mv2">{{session.title}}</p>
-          {% if session.extra.session %}
-          <p class="dib ml1 mv2" style="color: #808080;">Session {{session.extra.session}}</p>
-          {% endif %}
-        </div>
-        {% if session.extra.difficulty %}
-        <div class="w-100">
-          <p class="dib mt0 mb2 f9 br2 bg-gray5 mono" style="padding: 2px 4px;">{{session.extra.difficulty}}</p>
-        </div>
-        {% endif %}
-        <p class="w-100 mv0" style="color: #808080;">{{session.description}}</p>
-        </div>
+          <div class="dib flex flex-column mr8 mb6" style="max-width: 656px;">
+            {% if session.extra.image %}
+            <img src="{{session.extra.image}}" class="w-100 ba"/>
+            {% endif %}
+            <div class="w-100">
+              <p class="dib mv2">{{session.title}}</p>
+              {% if session.extra.session %}
+              <p class="dib ml1 mv2" style="color: #808080;">Session {{session.extra.session}}</p>
+              {% endif %}
+            </div>
+            {% if session.extra.difficulty %}
+            <div class="w-100">
+              <p class="dib mt0 mb2 f9 br2 bg-gray5 mono" style="padding: 2px 4px;">{{session.extra.difficulty}}</p>
+            </div>
+            {% endif %}
+            <p class="w-100 mv0" style="color: #808080;">{{session.description}}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </section>
+
+      <h2 class="fw6 f7 full mt9">Lessons</h2>
+      <p class="full mt0 mb7">Follow along with the course, week by week.</p>
+      <section class="full flex flex-wrap flex-nowrap-l flex-nowrap-xl flex-row">
+        {% set lessons = get_section(path="lessons/_index.md") %}
+        {% for lesson in lessons.pages %}
+        <a class="dib bn" href="{{lesson.permalink}}">
+          <div class="dib flex flex-column mr8 mb6" style="max-width: 296px;">
+            {% if lesson.extra.image %}
+            <img src="{{lesson.extra.image}}" class="w-100 ba" />
+            {% endif %}
+            <div class="w-100">
+              <p class="dib mv2">{{lesson.title}}</p>
+            </div>
+            <p class="w-100 mv0" style="color: #808080;">{{lesson.description}}</p>
+          </div>
         </a>
         {% endfor %}
       </section>
